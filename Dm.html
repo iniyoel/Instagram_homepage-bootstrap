@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Direct Page Clone</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        /* Customize sidebar styling */
+        .sidebar {
+            background-color: #f0f0f0;
+            height: 100vh;
+            border-right: 1px solid #ddd;
+        }
+
+        /* Customize message list styling */
+        .message-list {
+            height: 100vh;
+            border-right: 1px solid #ddd;
+        }
+
+        /* Customize message view styling */
+        .message-view {
+            height: 100vh;
+            overflow-y: auto;
+        }
+        ul {
+        display: flex;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1 d-flex flex-column justify-content-between position-fixed" style="border-right: #f0f0f0 solid; height: 100%; ">
+                <div id="logo" class="mt-3 mb-4 d-flex" >
+                  <img src="img/instagram.png" alt="logo" class="img-fluid mx-2" style="width:24px; height: 25px;">
+                </div>
+                <div id="nav-menu" class="d-flex flex-column ">
+                  <ul class="flex-column mt-5 ml-0 pl-0 mt-5 mb-5">
+                    <li style="text-decoration: none; color: black;">
+                      <a href="beranda.html" style="display: flex; flex-direction: row; text-decoration: none;" class="mb-4">
+                        <img src="img/accueil.png" alt="home" class="img-fluid mx-2" style="width: 24px; height: 25px;">
+                        <span class="d-lg-block" style="color: black; font-size: 17px; font-weight: 500;"></span>
+                      </a>
+                    </li>
+                    <li style="text-decoration: none; color: black;">
+                      <a href="beranda.html" style="display: flex; flex-direction: row; text-decoration: none;" class="mb-4">
+                        <img src="img/search.png" alt="search" class="img-fluid mx-2" style="width: 24px; height: 25px;">
+                        <span class="d-lg-block" style="color: black; font-size: 17px; font-weight: 500;"></span>
+                      </a>
+                    </li>
+                    <li style="text-decoration: none; color: black;">
+                      <a href="beranda.html" style="display: flex; flex-direction: row; text-decoration: none;" class="mb-4">
+                        <img src="img/compass.png" alt="explore" class="img-fluid mx-2" style="width: 24px; height: 25px;">
+                        <span class="d-lg-block" style="color: black; font-size: 17px; font-weight: 500;"></span>
+                      </a>
+                    </li>
+                    <li style="text-decoration: none; color: black;">
+                      <a href="beranda.html" style="display: flex; flex-direction: row; text-decoration: none;" class="mb-4">
+                        <img src="img/video.png" alt="Reels" class="img-fluid mx-2" style="width: 24px; height: 25px;">
+                        <span class="d-lg-block" style="color: black; font-size: 17px; font-weight: 500;"></span>
+                      </a>
+                    </li>
+                    <li  style="text-decoration: none; color: black;">
+                      <a href="beranda.html" style="display: flex; flex-direction: row; text-decoration: none;" class="mb-4">
+                        <img src="img/send.png" alt="Messages" class="img-fluid mx-2" style="width: 24px; height: 25px;">
+                        <span class="d-lg-block" style="color: black; font-size: 17px; font-weight: 500;"></span>
+                      </a>
+                    </li>
+                    <li style="text-decoration: none; color: black;">
+                      <a href="beranda.html" style="display: flex; flex-direction: row; text-decoration: none;" class="mb-4">
+                        <img src="img/love.png" alt="Notifications" class="img-fluid mx-2" style="width: 24px; height: 25px;">
+                        <span class="d-lg-block" style="color: black; font-size: 17px; font-weight: 500;"></span>
+                      </a>
+                    </li>
+                    <li style="text-decoration: none; color: black;">
+                      <a href="beranda.html" style="display: flex; flex-direction: row; text-decoration: none;" class="mb-4">
+                        <img src="img/tab.png" alt="Create" class="img-fluid mx-2" style="width: 24px; height: 25px;">
+                        <span class="d-lg-block" style="color: black; font-size: 17px; font-weight: 500;"></span>
+                      </a>
+                    </li>
+                    <li style="text-decoration: none; color: black;">
+                      <a href="beranda.html" style="display: flex; flex-direction: row; text-decoration: none;" class="mb-4">
+                        <img src="img/profile_img.jpg" alt="Profile" class="img-fluid mx-2" style="width: 24px; height: 25px; border-radius: 30px;">
+                        <span class="d-lg-block" style="color: black; font-size: 17px; font-weight: 500;"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="more">
+                  <div style="text-decoration: none;" class="pl-0 mt-5">
+                    <a href="beranda.html" style="display: flex; flex-direction: row; text-decoration: none;" class="mb-4">
+                      <img src="img/menu.png" alt="Create" class="img-fluid mx-2" style="width: 24px; height: 25px;">
+                      <span class="d-lg-block" style="color: black; font-size: 17px; font-weight: 500;"></span>
+                    </a>
+                  </div>  
+                </div>
+              </div>
+            
+            <!-- Message List -->
+            <div class="col-3 ml-auto d-flex py-3 flex-column" id="message-list" style="border-right: #f0f0f0 solid; height: 100vh;">
+                <div class="d-flex flex-row justify-content-around" style="border-bottom: #f0f0f0 solid;">
+                    <a href="#" style="text-decoration: none; color: black;">
+                        <p style="font-size: 23px; font-weight: 600;">username</p>
+                    </a>
+                    <a href="#" style="text-decoration: none; color: black;">
+                        <img src="img/edit.png" alt="new-messages" width="24px">
+                    </a>
+                </div>
+                <div class="pt-3 d-flex flex-row justify-content-between">
+                    <p style="font-size: 17px; font-weight: 700;">
+                        Messages
+                    </p>
+                    <p style="font-size: 17px; font-weight: 700; opacity: 0.5;">
+                        Requests
+                    </p>
+                </div>
+                <div class="d-flex flex-column pt-2">
+                    <div class="d-flex flex-column">
+                        <a href="#" style="color: black; text-decoration: none;" class="mb-3 d-flex flex-row align-items-center">
+                            <img src="img/profile_img.jpg" alt="dm-list" class="rounded-circle" width="75px">
+                            <div class="d-flex flex-column ml-2 justify-content-center">
+                                <p style="font-size: 15px; font-weight: 600;" class="mb-0">username</p>
+                                <p style="font-size: 15px; font-weight: 600; opacity: 0.5;" class="mb-0">active one week ago.</p>
+                            </div>
+                        </a>
+                        <a href="#" style="color: black; text-decoration: none;" class="mb-3 d-flex flex-row align-items-center">
+                            <img src="img/profile_img.jpg" alt="dm-list" class="rounded-circle" width="75px">
+                            <div class="d-flex flex-column ml-2 justify-content-center">
+                                <p style="font-size: 15px; font-weight: 600;" class="mb-0">username</p>
+                                <p style="font-size: 15px; font-weight: 600; opacity: 0.5;" class="mb-0">active one week ago.</p>
+                            </div>
+                        </a>
+                        <a href="#" style="color: black; text-decoration: none;" class="mb-3 d-flex flex-row align-items-center">
+                            <img src="img/profile_img.jpg" alt="dm-list" class="rounded-circle" width="75px">
+                            <div class="d-flex flex-column ml-2 justify-content-center">
+                                <p style="font-size: 15px; font-weight: 600;" class="mb-0">username</p>
+                                <p style="font-size: 15px; font-weight: 600; opacity: 0.5;" class="mb-0">active one week ago.</p>
+                            </div>
+                        </a>
+                        <a href="#" style="color: black; text-decoration: none;" class="mb-3 d-flex flex-row align-items-center">
+                            <img src="img/profile_img.jpg" alt="dm-list" class="rounded-circle" width="75px">
+                            <div class="d-flex flex-column ml-2 justify-content-center">
+                                <p style="font-size: 15px; font-weight: 600;" class="mb-0">username</p>
+                                <p style="font-size: 15px; font-weight: 600; opacity: 0.5;" class="mb-0">active one week ago.</p>
+                            </div>
+                        </a>
+                        <a href="#" style="color: black; text-decoration: none;" class="mb-3 d-flex flex-row align-items-center">
+                            <img src="img/profile_img.jpg" alt="dm-list" class="rounded-circle" width="75px">
+                            <div class="d-flex flex-column ml-2 justify-content-center">
+                                <p style="font-size: 15px; font-weight: 600;" class="mb-0">username</p>
+                                <p style="font-size: 15px; font-weight: 600; opacity: 0.5;" class="mb-0">active one week ago.</p>
+                            </div>
+                        </a>
+                        <a href="#" style="color: black; text-decoration: none;" class="mb-3 d-flex flex-row align-items-center">
+                            <img src="img/profile_img.jpg" alt="dm-list" class="rounded-circle" width="75px">
+                            <div class="d-flex flex-column ml-2 justify-content-center">
+                                <p style="font-size: 15px; font-weight: 600;" class="mb-0">username</p>
+                                <p style="font-size: 15px; font-weight: 600; opacity: 0.5;" class="mb-0">active one week ago.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Message View -->
+            <div class="col-6 mr-auto message-view align-items-center d-flex flex-column">
+                <div class="my-auto text-center">
+                    <svg class="bi bi-envelope" width="3em" height="3em" viewBox="0 0 16 16"
+                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                                d="M14 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z" />
+                        <path
+                                d="M.05 3.555C.017 3.698 0 3.847 0 4v.697l5.803 3.546L0 11.801V12c0 .306.069.596.192.856l6.57-4.027L8 9.586l1.239-.757 6.57 4.027c.122-.26.191-.55.191-.856v-.2l-5.803-3.557L16 4.697V4c0-.153-.017-.302-.05-.445L8 8.414.05 3.555z" />
+                    </svg>
+                    <p style="font-size: 20px; font-weight: 700px;" class="my-0">Your messages</p>
+                    <p style="font-size: 15px; font-weight: 400px; opacity: 0.5;" class="my-0">Send private photos and messages to a friend or group</p>
+                    <button class="rounded py-2 px-3 mt-2" style="border: none; background-color: rgb(0, 153, 255); color: white;">
+                        Send messages
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
